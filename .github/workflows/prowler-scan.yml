@@ -40,13 +40,14 @@ jobs:
       # 5. Execute Prowler IaC (Static Analysis) Scan
       # - We scan the local dummy-iac directory
       # - Output HTML format (-M html) into public directory
+      # - We add '|| true' so that security failures don't stop the deploy step
       - name: Run Prowler IaC Scan
         run: |
           prowler iac \
             --scan-path ./dummy-iac \
             -M html \
             -o ./public \
-            -F index
+            -F index || true
 
       # 6. Deploy the generated HTML report to GitHub Pages
       - name: Deploy Dashboard to GitHub Pages
