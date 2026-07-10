@@ -1,0 +1,56 @@
+name: Cloud Security Posture Audit
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Run automatically every Sunday at midnight
+  workflow_dispatch: # Allow running the scan manually from the GitHub Actions tab
+
+permissions:
+  contents: write # Required to push the HTML report to the gh-pages branch
+
+jobs:
+  prowler-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Install Prowler
+      - name: Install Prowler
+        run: |
+          pip install prowler
+
+      # 4. Set up Google Cloud Credentials
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      # 5. Execute Prowler Audit
+      # - We run Prowler GCP scan
+      # - We export only the HTML report format (-M html)
+      # - We save it in a folder named 'public'
+      - name: Run Prowler GCP Scan
+        run: |
+          prowler gcp \
+            --project-ids ${{ secrets.GCP_PROJECT_ID }} \
+            -M html \
+            -o ./public \
+            -F index
+        env:
+          GOOGLE_CLOUD_QUOTA_PROJECT: ${{ secrets.GCP_PROJECT_ID }}
+
+      # 6. Deploy the generated HTML report to GitHub Pages
+      - name: Deploy Dashboard to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
