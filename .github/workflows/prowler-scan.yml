@@ -28,27 +28,19 @@ jobs:
         run: |
           pip install prowler
 
-      # 4. Set up Google Cloud Credentials
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
-      # 5. Execute Prowler Audit
-      # - We run Prowler GCP scan
-      # - We export only the HTML report format (-M html)
-      # - We save it in a folder named 'public'
-      - name: Run Prowler GCP Scan
+      # 4. Execute Prowler IaC (Static Analysis) Scan
+      # - We scan the local dummy-iac directory
+      # - No cloud credentials needed!
+      # - Output HTML format (-M html) into public directory
+      - name: Run Prowler IaC Scan
         run: |
-          prowler gcp \
-            --project-ids ${{ secrets.GCP_PROJECT_ID }} \
+          prowler iac \
+            --scan-path ./dummy-iac \
             -M html \
             -o ./public \
             -F index
-        env:
-          GOOGLE_CLOUD_QUOTA_PROJECT: ${{ secrets.GCP_PROJECT_ID }}
 
-      # 6. Deploy the generated HTML report to GitHub Pages
+      # 5. Deploy the generated HTML report to GitHub Pages
       - name: Deploy Dashboard to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
