@@ -1,0 +1,15 @@
+# Ignore GCP credentials keys (Critical security protection)
+*.json
+
+# Ignore Python script temporary checkpoints or caches
+__pycache__/
+*.pyc
+
+# Ignore downloaded screenshot source images
+*.png
+
+# Ignore temporary check scripts
+check_images.py
+inspect_lines.py
+download_screenshots.py
+download_signed_screenshots.py
