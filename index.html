@@ -46,7 +46,7 @@
                 <li class="list-group-item">
                 <div class="row">
                     <div class="col-md-auto">
-                    <b>Version:</b> 5.36.0
+                    <b>Version:</b> 5.37.1
                     </div>
                 </div>
                 </li>
@@ -54,7 +54,7 @@
                 <b>Parameters used:</b> iac --scan-path ./dummy-iac -M html -o ./public -F index
                 </li>
                 <li class="list-group-item">
-                <b>Date:</b> 2026-08-02T07:57:08.488605
+                <b>Date:</b> 2026-08-09T04:48:08.541462
                 </li>
             </ul>
             </div>
@@ -140,12 +140,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0002</td>
-                            <td>Image user should not be 'root'</td>
+                            <td>Image user should not be &#39;root&#39;</td>
                             <td>Dockerfile</td>
                             <td></td>
-                            <td>Last USER command in Dockerfile should not be 'root'</td>
+                            <td>Last USER command in Dockerfile should not be &#39;root&#39;</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add 'USER <non root user name>' line to the Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0002"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;USER &lt;non root user name&gt;&#39; line to the Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0002"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -160,7 +160,7 @@
                             <td></td>
                             <td>Port 22 should not be exposed in Dockerfile</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Remove 'EXPOSE 22' statement from the Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0004"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Remove &#39;EXPOSE 22&#39; statement from the Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0004"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -185,12 +185,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0029</td>
-                            <td>'apt-get' missing '--no-install-recommends'</td>
+                            <td>&#39;apt-get&#39; missing &#39;--no-install-recommends&#39;</td>
                             <td>Dockerfile</td>
                             <td></td>
-                            <td>'--no-install-recommends' flag is missed: 'apt-get update && apt-get install -y     curl     sudo'</td>
+                            <td>&#39;--no-install-recommends&#39; flag is missed: &#39;apt-get update &amp;&amp; apt-get install -y     curl     sudo&#39;</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add '--no-install-recommends' flag to 'apt-get'</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0029"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;--no-install-recommends&#39; flag to &#39;apt-get&#39;</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0029"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -200,12 +200,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0001</td>
-                            <td>':latest' tag used</td>
+                            <td>&#39;:latest&#39; tag used</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add a tag to the image in the 'FROM' statement</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0001"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add a tag to the image in the &#39;FROM&#39; statement</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0001"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -230,12 +230,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0006</td>
-                            <td>COPY '--from' referring to the current image</td>
+                            <td>COPY &#39;--from&#39; referring to the current image</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Change the '--from' so that it will not refer to itself</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0006"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Change the &#39;--from&#39; so that it will not refer to itself</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0006"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -290,12 +290,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0010</td>
-                            <td>RUN using 'sudo'</td>
+                            <td>RUN using &#39;sudo&#39;</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Don't use sudo</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0010"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Don&#39;t use sudo</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0010"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -335,7 +335,7 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0013</td>
-                            <td>'RUN cd ...' to change directory</td>
+                            <td>&#39;RUN cd ...&#39; to change directory</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
@@ -350,12 +350,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0014</td>
-                            <td>RUN using 'wget' and 'curl'</td>
+                            <td>RUN using &#39;wget&#39; and &#39;curl&#39;</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Pick one util, either 'wget' or 'curl'</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0014"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Pick one util, either &#39;wget&#39; or &#39;curl&#39;</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0014"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -365,12 +365,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0015</td>
-                            <td>'yum clean all' missing</td>
+                            <td>&#39;yum clean all&#39; missing</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add 'yum clean all' to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0015"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;yum clean all&#39; to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0015"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -395,12 +395,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0017</td>
-                            <td>'RUN <package-manager> update' instruction alone</td>
+                            <td>&#39;RUN &lt;package-manager&gt; update&#39; instruction alone</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Combine '<package-manager> update' and '<package-manager> install' instructions to single one</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0017"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Combine &#39;&lt;package-manager&gt; update&#39; and &#39;&lt;package-manager&gt; install&#39; instructions to single one</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0017"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -410,12 +410,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0019</td>
-                            <td>'dnf clean all' missing</td>
+                            <td>&#39;dnf clean all&#39; missing</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add 'dnf clean all' to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0019"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;dnf clean all&#39; to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0019"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -425,12 +425,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0020</td>
-                            <td>'zypper clean' missing</td>
+                            <td>&#39;zypper clean&#39; missing</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add 'zypper clean' to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0020"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;zypper clean&#39; to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0020"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -440,12 +440,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0021</td>
-                            <td>'apt-get' missing '-y' to avoid manual input</td>
+                            <td>&#39;apt-get&#39; missing &#39;-y&#39; to avoid manual input</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add '-y' flag to 'apt-get'</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0021"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;-y&#39; flag to &#39;apt-get&#39;</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0021"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -485,12 +485,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0025</td>
-                            <td>'apk add' is missing '--no-cache'</td>
+                            <td>&#39;apk add&#39; is missing &#39;--no-cache&#39;</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add '--no-cache' to 'apk add' in Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0025"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;--no-cache&#39; to &#39;apk add&#39; in Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0025"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
@@ -500,12 +500,12 @@
                             <td>dockerfile</td>
                             <td>branch</td>
                             <td>DS-0027</td>
-                            <td>'microdnf clean all' missing</td>
+                            <td>&#39;microdnf clean all&#39; missing</td>
                             <td>Dockerfile</td>
                             <td></td>
                             <td>No issues found</td>
                             <td><p class="show-read-more">This provider has not defined a risk for this check.</p></td>
-                            <td><p class="show-read-more">Add 'microdnf clean all' to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0027"><i class="fas fa-external-link-alt"></i></a></td>
+                            <td><p class="show-read-more">Add &#39;microdnf clean all&#39; to Dockerfile</p> <a class="read-more" href="https://hub.prowler.com/check/DS-0027"><i class="fas fa-external-link-alt"></i></a></td>
                             <td><p class="show-read-more"></p></td>
                         </tr>
                         
